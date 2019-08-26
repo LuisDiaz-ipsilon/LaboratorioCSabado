@@ -15,6 +15,7 @@ int main(int argc, char *argv[]) {
 int main() 
 { 
  /* Actividad 1*/
+<<<<<<< HEAD
 	float x, resultado, resultadoDos, resultadoTres, resultadoCuatro;  /* se declara el resultado y la variable "x" como tipo flotante en caso de que se encuentre un entero con decimal como respuesta de la funcion*/ 
 =======
 int main() 
@@ -22,14 +23,20 @@ int main()
  /* Actividad 1*/
 	float x, resultado, resultadoDos, resultadoTres;  /* se declara el resultado y la variable "x" como tipo flotante en caso de que se encuentre un entero con decimal como respuesta de la funcion*/ 
 >>>>>>> 59b1c6abc2bcbad18b48a2bbc96c3642cd8123d6
+=======
+	float x, resultado, resultadoDos, resultadoTres;  /* se declara el resultado y la variable "x" como tipo flotante en caso de que se encuentre un entero con decimal como respuesta de la funcion*/ 
+>>>>>>> parent of 83d9542... Cuarta Funcion Terminada
 							 /* se agregan las variables necesarias para los 3 resultados*/
 	printf("indique el valor de x para las funciones \n");  /* se le indica al us teclear el valor de x para la funcion mencionada*/
 	scanf("%f", &x); 		 
 	resultado=(x-1)/4-(x-5)/36;   /* se le asigna el valor de la funcion a la variable correspondiente*/
 <<<<<<< HEAD
+<<<<<<< HEAD
 	
 =======
 >>>>>>> 59b1c6abc2bcbad18b48a2bbc96c3642cd8123d6
+=======
+>>>>>>> parent of 83d9542... Cuarta Funcion Terminada
 	resultadoDos = 6*((x+1)/8-(2*x-3)/16);		/* se le asigna el valor de la funcion a la variable correspondiente*/
 	
 	printf("el valor de la primera funcion \"(x-1)/4-(x-5)/36\" es: %f\n", resultado);  /* se imprime el resultado en pantalla de la primer funcion */
@@ -42,6 +49,7 @@ int main()
 	resultadoTres= (.66666667)*resultadoTres+1;
 	
 <<<<<<< HEAD
+<<<<<<< HEAD
 	resultadoCuatro= 2-(-2*(x+1)-(x-3)/2);		/* esta es la cuarta funcion*/
 	
 	printf("el valor de la tercera funcion \"(2/3)*(x-(1-(x-2)/3))+1\" es: %f\n", resultadoTres);  /* se imprime el resultado en pantalla de la tercera funcion */
@@ -49,6 +57,9 @@ int main()
 =======
 	printf("el valor de la tercera funcion \"(2/3)*(x-(1-(x-2)/3))+1\" es: %f\n", resultadoTres);  /* se imprime el resultado en pantalla de la tercera funcion */
 >>>>>>> 59b1c6abc2bcbad18b48a2bbc96c3642cd8123d6
+=======
+	printf("el valor de la tercera funcion \"(2/3)*(x-(1-(x-2)/3))+1\" es: %f\n", resultadoTres);  /* se imprime el resultado en pantalla de la tercera funcion */
+>>>>>>> parent of 83d9542... Cuarta Funcion Terminada
 	 
 	 
 	
