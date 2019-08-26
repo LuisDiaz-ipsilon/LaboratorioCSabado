@@ -1,13 +1,9 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-/* 
-Autor: Luis Fernando Flores Diaz
-Fecha: 25/08/2019
-Grupo: 008
-Horario: Sabado 9:00am - 11:00am
-Matricula: 1821936
- */
+/* Luis Fenrnado Flores Diaz */
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 int main(int argc, char *argv[]) {
@@ -95,5 +91,8 @@ int main()
 >>>>>>> parent of 59b1c6a... Revert "Cuarta Funcion Terminada"
 =======
 >>>>>>> 59b1c6abc2bcbad18b48a2bbc96c3642cd8123d6
+=======
+int main(int argc, char *argv[]) {
+>>>>>>> parent of acd06cd... Primer Funcion terminada
 	return 0;
 }
