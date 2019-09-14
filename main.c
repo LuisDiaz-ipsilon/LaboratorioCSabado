@@ -32,16 +32,17 @@ int main() {
 	
 	//**************ACTIVIDAD 2************************
 	printf("Actividad 2\n\n");
-	int sumatoria, nuevoNum;
-	char noSi;
+	int numero; // se declaran las variables para almacenar el numero.
+	char noSi;					//se declara variable que almacenara la desicion del cliente.
 	fflush(stdin);
-	do
+	
+	do			//lineas 39-45: proceso para verificar un nuevo numero.
 	{
 		printf("indique el numero:\n"); 
-		scanf("%d", &nuevoNum);
-		printf("El Numero ingresado es: %d \n",nuevoNum);
+		scanf("%d", &numero);
+		printf("El nuevo numero ingresado es: %d \n", numero);
 		
-	} while (nuevoNum<100);
+	} while (numero<100);			//si el numero es mayor que 100 este sera impreso y el programa finalizara.
 	
 
 	
