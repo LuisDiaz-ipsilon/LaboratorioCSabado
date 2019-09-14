@@ -11,6 +11,7 @@ Matricula: 1821936
 
 int main() {
 	//**************ACTIVIDAD 1************************
+	printf("Actividad 1\n\n");
 	int sumaNumero, nuevoNumero;  //se declaran las variables para la recolecion de la suma de los numeros.
 	char siNo;				//se declara la variable de decision de sumar un numero.
 	
@@ -27,7 +28,20 @@ int main() {
 		scanf(" %c", &siNo);				//se le pide al usuario decidir nuevamente.
 	} 
 	
-	printf("La suma de los numeros introducidos es: %d", sumaNumero);		//se muestra al usuario la suma de los numeros.
+	printf("La suma de los numeros introducidos es: %d\n\n\n", sumaNumero);		//se muestra al usuario la suma de los numeros.
+	
+	//**************ACTIVIDAD 2************************
+	printf("Actividad 2\n\n");
+	int sumatoria, nuevoNum;
+	char noSi;
+	fflush(stdin);
+	do
+	{
+		printf("indique el numero:\n"); 
+		scanf("%d", &nuevoNum);
+		printf("El Numero ingresado es: %d \n",nuevoNum);
+		
+	} while (nuevoNum<100);
 	
 
 	
