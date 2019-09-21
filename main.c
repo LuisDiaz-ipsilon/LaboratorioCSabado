@@ -1,98 +1,50 @@
 #include <stdio.h>
-#include <stdlib.h>
+/* 
+Autor: Luis Fernando Flores Diaz
+Fecha: 21/09/2019
+Grupo: 008
+Horario: Sabado 9:00am - 11:00am
+Matricula: 1821936
+*/
 
-/* Luis Fenrnado Flores Diaz */
+int main() {
+	//**************ACTIVIDAD 1************************
+	printf("+++++++++ACTIVIDAD 1++++++++\n\n");
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-int main(int argc, char *argv[]) {
-=======
-int main() 
-{ 
-<<<<<<< HEAD
- /* Actividad 1*/
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-	float x, resultado, resultadoDos, resultadoTres, resultadoCuatro;  /* se declara el resultado y la variable "x" como tipo flotante en caso de que se encuentre un entero con decimal como respuesta de la funcion*/ 
-=======
-int main() 
-{ 
- /* Actividad 1*/
-	float x, resultado, resultadoDos, resultadoTres;  /* se declara el resultado y la variable "x" como tipo flotante en caso de que se encuentre un entero con decimal como respuesta de la funcion*/ 
->>>>>>> 59b1c6abc2bcbad18b48a2bbc96c3642cd8123d6
-=======
-	float x, resultado, resultadoDos, resultadoTres;  /* se declara el resultado y la variable "x" como tipo flotante en caso de que se encuentre un entero con decimal como respuesta de la funcion*/ 
->>>>>>> parent of 83d9542... Cuarta Funcion Terminada
-=======
-	float x, resultado, resultadoDos, resultadoTres;  /* se declara el resultado y la variable "x" como tipo flotante en caso de que se encuentre un entero con decimal como respuesta de la funcion*/ 
->>>>>>> parent of 83d9542... Cuarta Funcion Terminada
-							 /* se agregan las variables necesarias para los 3 resultados*/
-=======
-	float x, resultado, resultadoDos;  /* se declara el resultado y la variable "x" como tipo flotante en caso de que se encuentre un entero con decimal como respuesta de la funcion*/ 
-							 /* se agrega una tercer variable para el segundo resultado respectivo a la segunda funcion algebraica*/
->>>>>>> parent of 00bd864... Tercer Funcion Terminada
-	printf("indique el valor de x para las funciones \n");  /* se le indica al us teclear el valor de x para la funcion mencionada*/
-	scanf("%f", &x); 		 
-	resultado=(x-1)/4-(x-5)/36;   /* se le asigna el valor de la funcion a la variable correspondiente*/
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+	float calificacion, promedio=0;	//se declaran las variables para promedio y calificaciones para obtener un resultado preciso
+	int examen;						//variable que contara la cantidad de examenes
 	
-=======
->>>>>>> 59b1c6abc2bcbad18b48a2bbc96c3642cd8123d6
-=======
->>>>>>> parent of 83d9542... Cuarta Funcion Terminada
-=======
->>>>>>> parent of 83d9542... Cuarta Funcion Terminada
-	resultadoDos = 6*((x+1)/8-(2*x-3)/16);		/* se le asigna el valor de la funcion a la variable correspondiente*/
+	for (examen=1; examen<=10; examen+=1){			//se crea ciclo para obtener las calificaciones.
+		printf("indique la calificacion del examen %d\n", examen);  
+		scanf("%f", &calificacion);
+		promedio+=calificacion;				//se almacena la suma de las calificaciones.
+	}
+	promedio/=10;				//se realiza operacion para el promedio final.
 	
-	printf("el valor de la primera funcion \"(x-1)/4-(x-5)/36\" es: %f\n", resultado);  /* se imprime el resultado en pantalla de la primer funcion */
-	printf("el valor de la segunda funcion \"6((x+1)/8-(2x-3)/16)\" es: %f\n", resultadoDos);  /* se imprime el resultado en pantalla de la segunda funcion */
-	
-	 /* Actividad 2*/
-<<<<<<< HEAD
-	resultadoTres= (x-2)/3;					 /* se ordena las operaciones por jerarquia para el valor correcto de la funcion*/
-	resultadoTres= 1-resultadoTres;
-	resultadoTres= x-resultadoTres;
-	resultadoTres= (.66666667)*resultadoTres+1;
-	
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-	resultadoCuatro= 2-(-2*(x+1)-(x-3)/2);		/* esta es la cuarta funcion*/
-	
-	printf("el valor de la tercera funcion \"(2/3)*(x-(1-(x-2)/3))+1\" es: %f\n", resultadoTres);  /* se imprime el resultado en pantalla de la tercera funcion */
-	printf("el valor de la cuarta funcion \"2-(-2*(x+1)-(x-3)/2)\" es: %f\n", resultadoCuatro);  /* se imprime el resultado en pantalla de la cuarta funcion */
-=======
-	printf("el valor de la tercera funcion \"(2/3)*(x-(1-(x-2)/3))+1\" es: %f\n", resultadoTres);  /* se imprime el resultado en pantalla de la tercera funcion */
->>>>>>> 59b1c6abc2bcbad18b48a2bbc96c3642cd8123d6
-=======
-	printf("el valor de la tercera funcion \"(2/3)*(x-(1-(x-2)/3))+1\" es: %f\n", resultadoTres);  /* se imprime el resultado en pantalla de la tercera funcion */
->>>>>>> parent of 83d9542... Cuarta Funcion Terminada
-=======
-	printf("el valor de la tercera funcion \"(2/3)*(x-(1-(x-2)/3))+1\" es: %f\n", resultadoTres);  /* se imprime el resultado en pantalla de la tercera funcion */
->>>>>>> parent of 83d9542... Cuarta Funcion Terminada
-	 
-=======
->>>>>>> parent of 00bd864... Tercer Funcion Terminada
-	 
-=======
-	float x, resultado;  /* se declara el resultado y la variable "x" como tipo flotante en caso de que se encuentre un entero con decimal como respuesta de la funcion*/
-	printf("indique el valor de x para la funcion: \"(x-1)/4-(x-5)/36\"\n");  /* se le indica al us teclear el valor de x para la funcion mencionada*/
-	scanf("%f", &x); 		 
-	resultado=(x-1)/4-(x-5)/36;  
-	printf("el valor de la primera funcion es: %f\n", resultado);  /* se imprime el resultado en pantalla */
->>>>>>> parent of bea7938... Segunda Funcion Terminada
+	printf("El promedio del alumno es: %f\n", promedio);		//se muestra en pantalla el promedio final.
+	if (promedio>7) printf("APROBADO"); //linea 23,24: se muestra en pantalla el estatus del alumno.
+	else printf("REPROBADO");
 	
 	
-<<<<<<< HEAD
->>>>>>> parent of 59b1c6a... Revert "Cuarta Funcion Terminada"
-=======
->>>>>>> 59b1c6abc2bcbad18b48a2bbc96c3642cd8123d6
-=======
-int main(int argc, char *argv[]) {
->>>>>>> parent of acd06cd... Primer Funcion terminada
+	//**************ACTIVIDAD2*****************
+	printf("\n\n+++++++++ACTIVIDAD 2++++++++\n\n");
+	
+	int base, exponente, i, resultado=1;		//se declaran las variables de tipo entero. se declara la varibale que almacera el seultado como 1, para poder inciar en el ciclo con el numero base.
+	
+	printf("Indique la base del numero\n");		//lineas 34-37: se solicita base y exponente del numero.
+	scanf("%d", &base);
+	printf("Indique el exponente\n");
+	scanf("%d", &exponente);
+	
+	resultado*=base;			//para ejecutar de manera correcta la operacion se iguala el resultado a la base obtenida por teclado.
+	
+	for (i=2; i<=exponente; i++){		//se inicia el ciclo desde 2 ya que al menos se ejecutara una vez como en el caso de que el exponente sea 1.
+		resultado=resultado*base;		//operacion que realizara hasta llegar al exponente indicado.
+	}
+	
+	printf("un numero %d elevado a %d da como resutado: %d", base, exponente, resultado);	//se imprime el resultado.
+	
+
+	
 	return 0;
 }
