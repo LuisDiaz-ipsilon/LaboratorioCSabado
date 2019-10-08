@@ -1,98 +1,44 @@
 #include <stdio.h>
-#include <stdlib.h>
+/* 
+Autor: Luis Fernando Flores Diaz
+Fecha: 07/10/2019
+Grupo: 008
+Horario: Sabado 9:00am - 11:00am
+Matricula: 1821936
+ */
 
-/* Luis Fenrnado Flores Diaz */
+int main() {
+	//**************ACTIVIDAD1*****************
+	int ventasEmpleadoOficinaEdificio[5][9][1], e=3,o=7,ed=1;		// se toma en cuenta la posicion 0 de cada dimension, pero se cumple la cantidad de elemento que indica la readaccion.
+	
+	ventasEmpleadoOficinaEdificio[e][o][ed]=4234;	//utilize el numero 1 en la dimension 3 indicando que es el segundo elemento. 
+	
+	printf("El empleado %d de la ofinica numero %d del edificio numero %d ha vendido: %d unidades\n", e, o, ed+1, ventasEmpleadoOficinaEdificio[e][o][ed]);
+	
+	/*
+	a) ¿Cuantos elementos componen el array multidimensional?
+		10*6*2=120.
+		120 elementos.
+		
+	b) ¿Qué ocurre si intentamos mostrar por pantalla un valor con un índice que no está definido para ese array multidimensional?
+		Como el lenguaje C permite mostrar valores que estan fuera del rango indicado, podria mostrar un valor que no es correcto(basura). 
+	*/
+	
+	//**************ACTIVIDAD2*****************
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-int main(int argc, char *argv[]) {
-=======
-int main() 
-{ 
-<<<<<<< HEAD
- /* Actividad 1*/
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-	float x, resultado, resultadoDos, resultadoTres, resultadoCuatro;  /* se declara el resultado y la variable "x" como tipo flotante en caso de que se encuentre un entero con decimal como respuesta de la funcion*/ 
-=======
-int main() 
-{ 
- /* Actividad 1*/
-	float x, resultado, resultadoDos, resultadoTres;  /* se declara el resultado y la variable "x" como tipo flotante en caso de que se encuentre un entero con decimal como respuesta de la funcion*/ 
->>>>>>> 59b1c6abc2bcbad18b48a2bbc96c3642cd8123d6
-=======
-	float x, resultado, resultadoDos, resultadoTres;  /* se declara el resultado y la variable "x" como tipo flotante en caso de que se encuentre un entero con decimal como respuesta de la funcion*/ 
->>>>>>> parent of 83d9542... Cuarta Funcion Terminada
-=======
-	float x, resultado, resultadoDos, resultadoTres;  /* se declara el resultado y la variable "x" como tipo flotante en caso de que se encuentre un entero con decimal como respuesta de la funcion*/ 
->>>>>>> parent of 83d9542... Cuarta Funcion Terminada
-							 /* se agregan las variables necesarias para los 3 resultados*/
-=======
-	float x, resultado, resultadoDos;  /* se declara el resultado y la variable "x" como tipo flotante en caso de que se encuentre un entero con decimal como respuesta de la funcion*/ 
-							 /* se agrega una tercer variable para el segundo resultado respectivo a la segunda funcion algebraica*/
->>>>>>> parent of 00bd864... Tercer Funcion Terminada
-	printf("indique el valor de x para las funciones \n");  /* se le indica al us teclear el valor de x para la funcion mencionada*/
-	scanf("%f", &x); 		 
-	resultado=(x-1)/4-(x-5)/36;   /* se le asigna el valor de la funcion a la variable correspondiente*/
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+	int x, y, z; // variables para navegar por el array y sus tres dimensiones.
 	
-=======
->>>>>>> 59b1c6abc2bcbad18b48a2bbc96c3642cd8123d6
-=======
->>>>>>> parent of 83d9542... Cuarta Funcion Terminada
-=======
->>>>>>> parent of 83d9542... Cuarta Funcion Terminada
-	resultadoDos = 6*((x+1)/8-(2*x-3)/16);		/* se le asigna el valor de la funcion a la variable correspondiente*/
+	for (x=0; x<6; x++){		// ciclo para sumar 10 unidades a cada una de las ventas
+		for (y=0; y<10; y++){
+			for (z=0; z<2; z++){
+			ventasEmpleadoOficinaEdificio[x][y][z]+=5;
+			}
+		}
+	}
+	printf("El empleado %d de la ofinica numero %d del edificio numero %d ha vendido: %d unidades\n", e, o, 2, ventasEmpleadoOficinaEdificio[3][7][1]);	//impresion de el resultado despues de sumar 10 unidades.
 	
-	printf("el valor de la primera funcion \"(x-1)/4-(x-5)/36\" es: %f\n", resultado);  /* se imprime el resultado en pantalla de la primer funcion */
-	printf("el valor de la segunda funcion \"6((x+1)/8-(2x-3)/16)\" es: %f\n", resultadoDos);  /* se imprime el resultado en pantalla de la segunda funcion */
+
+
 	
-	 /* Actividad 2*/
-<<<<<<< HEAD
-	resultadoTres= (x-2)/3;					 /* se ordena las operaciones por jerarquia para el valor correcto de la funcion*/
-	resultadoTres= 1-resultadoTres;
-	resultadoTres= x-resultadoTres;
-	resultadoTres= (.66666667)*resultadoTres+1;
-	
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-	resultadoCuatro= 2-(-2*(x+1)-(x-3)/2);		/* esta es la cuarta funcion*/
-	
-	printf("el valor de la tercera funcion \"(2/3)*(x-(1-(x-2)/3))+1\" es: %f\n", resultadoTres);  /* se imprime el resultado en pantalla de la tercera funcion */
-	printf("el valor de la cuarta funcion \"2-(-2*(x+1)-(x-3)/2)\" es: %f\n", resultadoCuatro);  /* se imprime el resultado en pantalla de la cuarta funcion */
-=======
-	printf("el valor de la tercera funcion \"(2/3)*(x-(1-(x-2)/3))+1\" es: %f\n", resultadoTres);  /* se imprime el resultado en pantalla de la tercera funcion */
->>>>>>> 59b1c6abc2bcbad18b48a2bbc96c3642cd8123d6
-=======
-	printf("el valor de la tercera funcion \"(2/3)*(x-(1-(x-2)/3))+1\" es: %f\n", resultadoTres);  /* se imprime el resultado en pantalla de la tercera funcion */
->>>>>>> parent of 83d9542... Cuarta Funcion Terminada
-=======
-	printf("el valor de la tercera funcion \"(2/3)*(x-(1-(x-2)/3))+1\" es: %f\n", resultadoTres);  /* se imprime el resultado en pantalla de la tercera funcion */
->>>>>>> parent of 83d9542... Cuarta Funcion Terminada
-	 
-=======
->>>>>>> parent of 00bd864... Tercer Funcion Terminada
-	 
-=======
-	float x, resultado;  /* se declara el resultado y la variable "x" como tipo flotante en caso de que se encuentre un entero con decimal como respuesta de la funcion*/
-	printf("indique el valor de x para la funcion: \"(x-1)/4-(x-5)/36\"\n");  /* se le indica al us teclear el valor de x para la funcion mencionada*/
-	scanf("%f", &x); 		 
-	resultado=(x-1)/4-(x-5)/36;  
-	printf("el valor de la primera funcion es: %f\n", resultado);  /* se imprime el resultado en pantalla */
->>>>>>> parent of bea7938... Segunda Funcion Terminada
-	
-	
-<<<<<<< HEAD
->>>>>>> parent of 59b1c6a... Revert "Cuarta Funcion Terminada"
-=======
->>>>>>> 59b1c6abc2bcbad18b48a2bbc96c3642cd8123d6
-=======
-int main(int argc, char *argv[]) {
->>>>>>> parent of acd06cd... Primer Funcion terminada
 	return 0;
 }
