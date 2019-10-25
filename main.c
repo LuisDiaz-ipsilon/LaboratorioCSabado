@@ -1,98 +1,67 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
-/* Luis Fenrnado Flores Diaz */
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-int main(int argc, char *argv[]) {
-=======
-int main() 
-{ 
-<<<<<<< HEAD
- /* Actividad 1*/
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-	float x, resultado, resultadoDos, resultadoTres, resultadoCuatro;  /* se declara el resultado y la variable "x" como tipo flotante en caso de que se encuentre un entero con decimal como respuesta de la funcion*/ 
-=======
-int main() 
-{ 
- /* Actividad 1*/
-	float x, resultado, resultadoDos, resultadoTres;  /* se declara el resultado y la variable "x" como tipo flotante en caso de que se encuentre un entero con decimal como respuesta de la funcion*/ 
->>>>>>> 59b1c6abc2bcbad18b48a2bbc96c3642cd8123d6
-=======
-	float x, resultado, resultadoDos, resultadoTres;  /* se declara el resultado y la variable "x" como tipo flotante en caso de que se encuentre un entero con decimal como respuesta de la funcion*/ 
->>>>>>> parent of 83d9542... Cuarta Funcion Terminada
-=======
-	float x, resultado, resultadoDos, resultadoTres;  /* se declara el resultado y la variable "x" como tipo flotante en caso de que se encuentre un entero con decimal como respuesta de la funcion*/ 
->>>>>>> parent of 83d9542... Cuarta Funcion Terminada
-							 /* se agregan las variables necesarias para los 3 resultados*/
-=======
-	float x, resultado, resultadoDos;  /* se declara el resultado y la variable "x" como tipo flotante en caso de que se encuentre un entero con decimal como respuesta de la funcion*/ 
-							 /* se agrega una tercer variable para el segundo resultado respectivo a la segunda funcion algebraica*/
->>>>>>> parent of 00bd864... Tercer Funcion Terminada
-	printf("indique el valor de x para las funciones \n");  /* se le indica al us teclear el valor de x para la funcion mencionada*/
-	scanf("%f", &x); 		 
-	resultado=(x-1)/4-(x-5)/36;   /* se le asigna el valor de la funcion a la variable correspondiente*/
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+int main() { 
+//**************ACTIVIDAD1*****************
+	int cantEs=0;
 	
-=======
->>>>>>> 59b1c6abc2bcbad18b48a2bbc96c3642cd8123d6
-=======
->>>>>>> parent of 83d9542... Cuarta Funcion Terminada
-=======
->>>>>>> parent of 83d9542... Cuarta Funcion Terminada
-	resultadoDos = 6*((x+1)/8-(2*x-3)/16);		/* se le asigna el valor de la funcion a la variable correspondiente*/
+	struct estudiantes { //se declara la estructura de datos con una cantidad definida proximamente por el usuario.
+		char nombre[50];
+		char sexo;
+		int edad;
+		float nota[5];
+		float prom;
+	} es[cantEs];
 	
-	printf("el valor de la primera funcion \"(x-1)/4-(x-5)/36\" es: %f\n", resultado);  /* se imprime el resultado en pantalla de la primer funcion */
-	printf("el valor de la segunda funcion \"6((x+1)/8-(2x-3)/16)\" es: %f\n", resultadoDos);  /* se imprime el resultado en pantalla de la segunda funcion */
+	int elMayor; //alamcenara la posicion en el vector de estudiantes con el promedio mas alto.
 	
-	 /* Actividad 2*/
-<<<<<<< HEAD
-	resultadoTres= (x-2)/3;					 /* se ordena las operaciones por jerarquia para el valor correcto de la funcion*/
-	resultadoTres= 1-resultadoTres;
-	resultadoTres= x-resultadoTres;
-	resultadoTres= (.66666667)*resultadoTres+1;
+	printf("**************ACTIVIDAD1*****************\n\n"); //se pregunta por la cantidad de estudiantes a validar.
+	printf("Cuantos estudiantes recabara datos? ");
+	scanf("%d", &cantEs);
 	
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-	resultadoCuatro= 2-(-2*(x+1)-(x-3)/2);		/* esta es la cuarta funcion*/
+	int i=0, j=0;
+	int si=0; //se utiliza para validar el ingreso de variables
 	
-	printf("el valor de la tercera funcion \"(2/3)*(x-(1-(x-2)/3))+1\" es: %f\n", resultadoTres);  /* se imprime el resultado en pantalla de la tercera funcion */
-	printf("el valor de la cuarta funcion \"2-(-2*(x+1)-(x-3)/2)\" es: %f\n", resultadoCuatro);  /* se imprime el resultado en pantalla de la cuarta funcion */
-=======
-	printf("el valor de la tercera funcion \"(2/3)*(x-(1-(x-2)/3))+1\" es: %f\n", resultadoTres);  /* se imprime el resultado en pantalla de la tercera funcion */
->>>>>>> 59b1c6abc2bcbad18b48a2bbc96c3642cd8123d6
-=======
-	printf("el valor de la tercera funcion \"(2/3)*(x-(1-(x-2)/3))+1\" es: %f\n", resultadoTres);  /* se imprime el resultado en pantalla de la tercera funcion */
->>>>>>> parent of 83d9542... Cuarta Funcion Terminada
-=======
-	printf("el valor de la tercera funcion \"(2/3)*(x-(1-(x-2)/3))+1\" es: %f\n", resultadoTres);  /* se imprime el resultado en pantalla de la tercera funcion */
->>>>>>> parent of 83d9542... Cuarta Funcion Terminada
-	 
-=======
->>>>>>> parent of 00bd864... Tercer Funcion Terminada
-	 
-=======
-	float x, resultado;  /* se declara el resultado y la variable "x" como tipo flotante en caso de que se encuentre un entero con decimal como respuesta de la funcion*/
-	printf("indique el valor de x para la funcion: \"(x-1)/4-(x-5)/36\"\n");  /* se le indica al us teclear el valor de x para la funcion mencionada*/
-	scanf("%f", &x); 		 
-	resultado=(x-1)/4-(x-5)/36;  
-	printf("el valor de la primera funcion es: %f\n", resultado);  /* se imprime el resultado en pantalla */
->>>>>>> parent of bea7938... Segunda Funcion Terminada
+	for (i=0; i<cantEs; i++){		//ciclo recaudacion de datos para cada alumno.
+		printf("\nIndique el nombre del estudiante%d: ", i+1);
+		fflush(stdin);
+		gets(es[i].nombre);
+		fflush(stdin);
+		printf("Sexo(F/M): \n");
+		do {		//validacion de ingreso de texto.
+			fflush(stdin);
+			scanf("%c", &es[i].sexo);
+			fflush(stdin);
+			if (es[i].sexo=='f' || es[i].sexo=='F' || es[i].sexo=='m' || es[i].sexo=='M') si=1;
+			else printf("Indique nuevamente: ");
+		} while (si!=1);
+		printf("Edad: ");
+		scanf("%d", &es[i].edad);
+		es[i].prom=0;
+		for (j=0; j<=4; j++){			//ciclo que recore el vector que almacena las notas.
+			printf("indique la nota %d: ", j+1);
+			fflush(stdin);
+			scanf("%f", &es[i].nota[j]);  //cuanto lo ejecuto el programa no finaliza de manera correcta o en ocaciones cuando comentarizo el proceso de promediar me arroja valores extraños. 
+			//gracias por el apoyo.
+			fflush(stdin);
+			es[i].prom+=es[i].nota[j]; //suma de notas para promedio.
+		}
+		es[i].prom=es[i].prom/5; //valor final para el promedio de cada estudiante.
+	}
+	
+	int auxProm=0; //auxiliar que almacena por el momento el numero mas alto.
+	for (i=0; i<cantEs; i++){		
+		if (es[i].prom>es[i+1].prom && es[i].prom>auxProm){
+			auxProm=es[i].prom;
+			elMayor=i;
+		}
+	}
+	
+	printf("\n\nEl estudiante con mayor promedio es:\n%s, sexo: %c\nedad: %d\nnota1: %f\nnota2: %f\nnota3: %f\nnota4: %f\nnota5: %f\nproemdio: %f", es[elMayor].nombre, es[elMayor].sexo, es[elMayor].edad, es[elMayor].nota[0], es[elMayor].nota[1], es[elMayor].nota[2], es[elMayor].nota[3], es[elMayor].nota[4], es[elMayor].prom);
 	
 	
-<<<<<<< HEAD
->>>>>>> parent of 59b1c6a... Revert "Cuarta Funcion Terminada"
-=======
->>>>>>> 59b1c6abc2bcbad18b48a2bbc96c3642cd8123d6
-=======
-int main(int argc, char *argv[]) {
->>>>>>> parent of acd06cd... Primer Funcion terminada
+	
 	return 0;
 }
