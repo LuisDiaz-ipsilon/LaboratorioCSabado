@@ -13,7 +13,15 @@ Matricula: 1821936
 
 int main() { 
 //**************ACTIVIDAD1*****************
-	int cantEs=0;
+	int cantEs;
+	
+	
+	
+	int elMayor; //alamcenara la posicion en el vector de estudiantes con el promedio mas alto.
+	
+	printf("**************ACTIVIDAD1*****************\n\n"); //se pregunta por la cantidad de estudiantes a validar.
+	printf("Cuantos estudiantes recabara datos? ");
+	scanf("%d", &cantEs);
 	
 	struct estudiantes { //se declara la estructura de datos con una cantidad definida proximamente por el usuario.
 		char nombre[50];
@@ -22,12 +30,6 @@ int main() {
 		int nota[5];
 		float prom;
 	} es[cantEs];
-	
-	int elMayor; //alamcenara la posicion en el vector de estudiantes con el promedio mas alto.
-	
-	printf("**************ACTIVIDAD1*****************\n\n"); //se pregunta por la cantidad de estudiantes a validar.
-	printf("Cuantos estudiantes recabara datos? ");
-	scanf("%d", &cantEs);
 	
 	int i=0, j=0;
 	int si=0; //se utiliza para validar el ingreso de variables
@@ -76,6 +78,11 @@ int main() {
 	i=0;
 	si=0;
 	int cantPnd=0;
+	
+	
+	printf("indique la cantidad de pandas para tomar los datos: ");
+	scanf("%d", &cantPnd);
+	
 	struct pandas{
 		char nombre[20];
 		int peso;
@@ -83,9 +90,6 @@ int main() {
 		char sexo;
 		int tenerBebes;
 	} pxndx[cantPnd];
-	
-	printf("indique la cantidad de pandas para tomar los datos: ");
-	scanf("%d", &cantPnd);
 	
 	for (i=0; i<cantPnd; i++){
 		printf("\n\n\nDatos del panda %d\n", i+1);
