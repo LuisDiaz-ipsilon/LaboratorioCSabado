@@ -2,7 +2,13 @@
 #include <stdlib.h>
 #include <string.h>
 
-
+/* 
+Autor: Luis Fernando Flores Diaz
+Fecha: 16/11/2019
+Grupo: 008
+Horario: Sabado 9:00am - 11:00am
+Matricula: 1821936
+*/
 int main(){
 	//**************ACTIVIDAD1*****************
 /*	FILE *archivo;//se declara el puntero para maenejar archivo.
